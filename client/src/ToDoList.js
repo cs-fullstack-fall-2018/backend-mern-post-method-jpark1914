@@ -5,7 +5,7 @@ class ToDoList extends Component {
     thisIsAMapFunction(eachItem) {
         return (
             <div>
-                <p>{eachItem._id}</p>
+
                 <p>{eachItem.username}</p>
                 <p>{eachItem.todo}</p>
                 <p>{eachItem.isDone.toString()}</p>

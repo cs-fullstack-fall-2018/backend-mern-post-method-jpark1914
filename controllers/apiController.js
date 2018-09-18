@@ -99,4 +99,18 @@ module.exports = function (app) {
 
     });
 
+    //ROUTE: LIST ALL To Dos in DATABASE:
+    app.get('/api/list', function (req, res) {
+
+        Todos.find({}, function (err, todo) { //Use the findID method on the data model to search DB
+            if (err) {
+                throw err; // If we get an error then bail
+            }
+            // Use Express to send the JSON back to the client in the web response
+            res.send(todo);
+        });
+
+    });
+
+
 };
